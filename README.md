@@ -4,4 +4,6 @@ using fontForge to 'minify' fonts, removes unused characters
 Utilises fontForge (http://fontforge.github.io/en-US/) python scripting to minimise custom font weight. 
 
 sh command:
-`fontforge -script fontMinify.py "string basefont destination newName`
+`fontforge -script fontMinify.py string basefont destination newName`
+
+This is integrated with versions of Super namtural master Grunt file
