@@ -1,37 +1,44 @@
-
+ # -*- coding: utf-8 -*-
 
 
 #!/Applications/FontForge.app/Contents/Resources/opt/local/bin
-
-
 #http://fontforge.github.io/python.html#Glyph
-#fontforge -script convert.py "this is an excellent script" C4HeaReg.ttf
+
+# USE COMMAND:
+#fontforge -script fontMinify.py _srcFonts/srcFont.ttf _output outputName
+
 
 import fontforge
 import sys
+import os
 
-#gets the length of the string passed in
-length = len(sys.argv[1])
-curFont = fontforge.open(sys.argv[2])
+curFont = fontforge.open(sys.argv[1])
 newfont = fontforge.font()
 
-for x in range(0, length):
-    curFont.selection.select(sys.argv[1][x])
+
+#gets the length of the string passed in
+# string = str(sys.argv[1])
+string = str("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@£$%^&*(/\')_-+=,.;:?1234567890"+'"')
+strLength = len(string)
+
+for x in range(0, strLength):
+    # print string[x]
+    curFont.selection.select(string[x])
     curFont.copy()
-    newfont.selection.select(sys.argv[1][x])
+    newfont.selection.select(string[x])
     newfont.paste()
 
 
 theGlyphs = newfont.glyphs()
 
-
-os.chdir(os.path.dirname(sys.argv[3]+"/"))
+os.chdir(os.path.dirname(sys.argv[2]+"/"))
 
 
 #print theGlyphs
-newfont.fontname=sys.argv[4]+".min"
-newfont.generate(sys.argv[4]+"_min.ttf")
-newfont.generate(sys.argv[4]+"_min.woff")
-newfont.generate(sys.argv[4]+"_min.woff2")
-newfont.generate(sys.argv[4]+"_min.svg")
-newfont.generate(sys.argv[4]+"_min.eot")
+newfont.fontname = sys.argv[3]+".min"
+newfont.familyname = "SuperCustom"
+newfont.generate(sys.argv[3]+"_min.ttf")
+newfont.generate(sys.argv[3]+"_min.woff")
+# newfont.generate(sys.argv[3]+"_min.woff2") #Doesn't seem to like this one
+newfont.generate(sys.argv[3]+"_min.svg")
+newfont.generate(sys.argv[3]+"_min.eot")
