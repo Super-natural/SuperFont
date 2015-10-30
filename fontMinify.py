@@ -5,7 +5,7 @@
 #http://fontforge.github.io/python.html#Glyph
 
 # USE COMMAND:
-#fontforge -script fontMinify.py _srcFonts/srcFont.ttf _output outputName
+#fontforge -script fontMinify.py _srcFonts/srcFont.ttf _outputs outputName
 
 
 import fontforge
@@ -18,7 +18,7 @@ newfont = fontforge.font()
 
 #gets the length of the string passed in
 # string = str(sys.argv[1])
-string = str("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@£$%^&*(/\')_-+=,.;:?1234567890"+'"')
+string = str("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@£$%^&€®™¢*(/\')_-+=,.;:?1234567890"+'"')
 strLength = len(string)
 
 for x in range(0, strLength):
