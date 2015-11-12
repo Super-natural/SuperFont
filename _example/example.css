@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: 'SuperCustom';
-  src: url('./_output/outputName_min.eot');
-  src: url('./_output/outputName_min.eot?#iefix') format('embedded-opentype'),
-       url('../_output/outputName_min.woff') format('woff'),
-       url('./_output/outputName_min..ttf')  format('truetype'),
-       url('./_output/outputName_min.svg#svgFontName') format('svg');
+  src: url('../_outputs/ITV_Reem-Medium_min.eot');
+  src: url('../_outputs/ITV_Reem-Medium_min.eot?#iefix') format('embedded-opentype'),
+       url('../_outputs/ITV_Reem-Medium_min.woff') format('woff'),
+       url('../_outputs/ITV_Reem-Medium_min..ttf')  format('truetype'),
+       url('../_outputs/ITV_Reem-Medium_min.svg#svgFontName') format('svg');
 }
 
 body, body * {
