@@ -38,6 +38,7 @@ os.chdir(os.path.dirname(sys.argv[2]+"/"))
 #print theGlyphs
 newfont.fontname = sys.argv[3]+".min"
 newfont.familyname = "SuperCustom"
+
 newfont.generate(sys.argv[3]+"_min.ttf")
 newfont.generate(sys.argv[3]+"_min.woff")
 # newfont.generate(sys.argv[3]+"_min.woff2") #Doesn't seem to like this one
