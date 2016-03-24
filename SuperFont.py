@@ -16,9 +16,14 @@ curFont = fontforge.open(sys.argv[1])
 newfont = fontforge.font()
 
 
-#gets the length of the string passed in
-# string = str(sys.argv[1])
-string = str("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@$%^&*(/\')_-+=,.;:?1234567890"+'"'+"£"+"€"+"®"+"™"+"¢")
+outputGlypthsType = sys.argv[4]
+if outputGlypthsType == "numbers":
+  string = str("1234567890")
+elif outputGlypthsType == "letters":
+  string = str("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
+else:
+  string = str("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@$%^&*(/\')_-+=,.;:?1234567890"+'"'+"£"+"€"+"®"+"™"+"¢")
+
 
 strLength = len(string)
 
